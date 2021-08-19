@@ -61,13 +61,46 @@ header .rover-header-right-mobile{
   .rover-hero-container :last-child{
     display: block;
   }
+  /* No.3 mobile view */
+  .rover-middle-section .rover-mobile-hero-container{
+    display: block;
+  }
+  .rover-middle-section .rover-two-boxes-container{
+      grid-template-columns: repeat(1,1fr);
+  }
+  .rover-cta-container .rover-cta-bottom-container .rover-cta{
+    display: none;
+  }
+  .rover-cta-box .rover-protections{
+    display: none;
+  }
+  /* No 4 Action*/
+  .rover-action-shot .rover-action-quote-container span::before{
+    display: none;
+  }
+  .rover-action-shot .rover-action-quote-container{
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .rover-123-container .rover-123-item-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .rover-123-container .rover-123-item-container .rover-123-item{
+    display: grid;
+    grid-template-columns :1fr 2fr;
+    gap: 10px;
+  }
+   
 }
-/* No.3 mobile view */
-@media (min-width:320px) and (max-width:500px){
-.rover-mobile-hero{
-  display: block;
-}
-}
+/* 
+@media (min-width:550px) {
+  .rover-action-shot{
+
+  }
+} */
+
 .rover-header-left a{
   text-decoration: none;
   color: #1b1f23;
@@ -122,6 +155,7 @@ header .rover-header-right-mobile{
   padding-bottom: 20px;
   padding-left: 10px;
   display: grid;
+  grid-template-columns: 1fr;
   gap: 10px; 
  
 }
@@ -133,11 +167,10 @@ header .rover-header-right-mobile{
 .rover-two-boxes-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 50px;
+  margin-bottom: 140px;
 }
 
-/* .rover-facts-container{
-
-} */
 
 .rover-cta-header{
   display: flex;
@@ -178,26 +211,83 @@ header .rover-header-right-mobile{
   position: absolute;
   top: 180%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* .rover-fact-indiv{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  
-} */
 
-/* .rover-facts-container{
-    display: grid;
-} */
-
-.rover-fact-indiv{
- display: flex;
- flex-wrap: wrap;
-}
 .rover-mobile-hero-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
   display: none;
 }
 
+.rover-mobile-hero{
+  width: 200px;
+  height: 200px;
+}
+.rover-fact-indiv{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 
+}
 
+.rover-action-shot{
+  background-image: url(/img/lady-with-her-dogs.jpg);
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.rover-action-quote-container{
+  border: 1px solid rgb(143, 143, 143);
+  background-color: white;
+  width: 50%;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+ 
+}
+.rover-action-quote-container p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.rover-quote{
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 10px;
+}
+
+.rover-action-dash{
+  background-color: green;
+  margin-top: 15px;
+  padding: 2px 2px;
+  margin-left: 1%;
+  margin-right: 90%;
+  border-radius: 5px;
+}
+.rover-action-quote-container span::before{
+  content: "- ";
+ 
+}
+.rover-123-container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.rover-123-container-title{
+  text-align: center;
+}
+
+.rover-123-item-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-left: 40px;
+  
+}
